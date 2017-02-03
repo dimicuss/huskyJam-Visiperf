@@ -1,0 +1,376 @@
+.home-store
+    position relative
+    padding 50px 0 0
+    min-height 840px
+    background url('/img/home-bg.jpg') top right no-repeat
+    box-sizing border-box
+
+    &__h1
+        text-align center
+        font-weight 300
+        font-size 20px
+        line-height 30px
+        text-transform uppercase
+
+        div
+            text-align center
+            font-weight bold
+            font-size 47px
+            line-height 30px
+            text-transform none
+            margin-top 12px
+
+.home-breadcrumbs
+    position absolute;
+    top 69px
+    left 30px
+    cursor pointer
+
+    &:hover
+        .home-breadcrumbs__text
+            color pelorous
+
+        .home-breadcrumbs__image
+            retina_sprite($s-home-breadcrumb2)
+
+    &__image
+        display inline-block
+        retina_sprite($s-home-breadcrumb1)
+
+    &__text
+        display inline-block
+        color #000
+        text-decoration none
+        font-size 12px
+        margin-left 14px
+        letter-spacing .1px
+
+
+
+
+.home-cart
+    margin 15px auto 0
+    width (100*2 / 3)%
+    display table
+    min-height 573px
+    border none
+    border-collapse collapse
+
+    &__left
+    &__right
+        display table-cell
+        vertical-align top
+        box-sizing border-box
+
+    &__left
+        width 562px
+        max-width 60%
+        background url('/img/home-image.jpg') 0 0 no-repeat
+        background-size cover
+
+    &__right
+        position relative
+        height 100%
+        background rgba(255,255,255, 0.75)
+
+.home-cart__arrow
+    position absolute
+    width 47px
+    height 47px
+    bottom 131px
+    left -20px
+    border 6px solid white
+    border-radius 50%
+
+    img
+        width 100%
+        height 100%
+        border-radius 50%
+
+
+.home-social
+    text-align center
+    margin-top 25px
+
+    &__item
+        margin 0 10px
+
+.home-info
+    min-height 498px
+    border 1px solid mercury
+    border-left none
+    border-bottom none
+    box-sizing border-box
+
+    &__manager
+        margin 48px 0 0 0
+
+
+.home-manager
+    position relative
+    border-bottom 1px solid silver
+    padding 0 0 29pe 68pe
+    lost-utility: clearfix;
+
+    &__photo
+        lost-column: 1/4;
+        width 72px
+        height 72px
+        margin-top 5px
+        border-radius 50%
+        border 5px solid #fff
+        box-shadow 0 0 10px rgba(0,0,0,0.3)
+
+        img
+            width 100%
+            height 100%
+            border-radius 50%
+
+    &__about
+        lost-column 3/4
+        padding-left 25px
+
+    &__name
+        font-size 18px
+        font-weight 500
+
+    &__text
+        line-height 20px
+        font-size 13px
+        margin-top 2px
+        text-align justify
+        padding-right 20px
+
+.home-contact
+    width 230px
+    margin 30px 0 15px 128px
+    box-sizing border-box
+
+    &__address
+    &__time
+    &__phone
+        position relative
+        padding-left 40px
+
+    &__address:before
+        retina_sprite($s-r-icon1)
+
+    &__time:before
+        retina_sprite($s-r-icon2)
+
+    &__phone:before
+        retina_sprite($s-r-icon3)
+
+    &__address
+        font-size 14px
+        margin-top 41px
+
+        &:before
+            content ''
+            position absolute
+            top 0
+            left 2px
+
+    &__time
+        margin-top 27px
+        font-size 14px
+
+        &:before
+            content ''
+            position absolute
+            top 2px
+            left 2px
+
+    &__time-now
+        color atlantis
+        font-weight 500
+
+    &__time-month
+        font-style italic
+        font-size 11px
+        letter-spacing .3px
+        margin-top 2px
+
+    &__table
+        margin-top 17px
+        border-spacing 0
+        border-collapse collapse
+
+        td
+            vertical-align top
+            letter-spacing -.3px
+            padding-bottom 4px
+
+            &:first-child
+                font-weight bold
+                font-size 12px
+                width 48px
+                padding-left 3px
+                letter-spacing normal
+
+    &__phone
+        padding-top 2px
+        font-size 14px
+        font-weight bold
+
+        &:before
+            content ''
+            position absolute
+            top 0
+            left 3px
+
+.home-link__button.home-link__button
+    height 76px
+
+.home-link__button
+    display inline-block
+    width 100%
+    line-height 75px
+    font-weight 600
+    text-decoration none
+
+
++below(1440px)
+
+    .home-cart
+        width 90%
+
+        &__left
+            width 50%
+
+    .home-contact
+        margin-right 108pe
+
+
+
++below(1280px)
+
+    .home-manager
+        padding-left 48pe
+
+    .home-contact
+        margin-left 108pe
+
++below(1024px)
+
+    .home-manager
+        padding-left 16pe
+
+    .home-contact
+        margin-left 65pe
+
+        &__address
+            margin-top 30px
+
+        &__time
+            margin-top 17px
+
+    .home-store
+        padding-top 20px
+
++below(768px)
+
+    .home-breadcrumbs
+        top 20px
+
+    .home-store
+        padding-bottom 20px
+        background url('/img/home-bg.jpg') bottom right no-repeat
+
+    .home-cart__arrow
+        display none
+
+    .home-cart
+        display block
+
+        &__left
+            display block
+            max-width 100%
+            width 100%
+            height 573px
+
+        &__right
+            display block
+
+    .home-contact
+        position relative
+        width 100%
+        margin-left 0
+        margin-right 0
+        padding-left 20px
+        padding-right 20px
+
+        &__address
+            margin-right 350px
+            padding-top 5px
+            margin-bottom 32px
+
+        &__phone
+        &__time
+            position absolute
+            margin-top 0
+
+        &__phone
+            right 230px
+            top 5px
+
+        &__time
+            right 20px
+            top 0
+
++below(600px)
+
+    .home-breadcrumbs__text
+        display none
+
+    .home-cart__left
+        height 400px
+
+    .home-contact__address
+        margin-right 200px
+
+    .home-contact__phone
+        position relative
+        top 0
+        left 0
+
++below(420px)
+
+    .home-manager
+        padding-left 0
+
+
+        &__photo
+        &__about
+            lost-column 1/1
+            padding-left 0
+
+
+        &__photo
+            width 75px
+            height 75px
+            margin 0 auto 20px
+
+
+        &__photo:nth-child(1n)
+            float none
+            margin-right auto
+
+        &__name
+            text-align center
+
+        &__text
+            padding 10px 10px 0
+
+
+    .home-cart__left
+            height 250px
+
+    .home-contact__address
+        margin-right 0
+
+    .home-contact__time
+        position relative
+        top 0
+        left 0
+        margin-bottom 20px

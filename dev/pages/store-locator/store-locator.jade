@@ -1,0 +1,32 @@
+extends ../../common/jade/_default
+
+block pageInfo
+    - var page = {}
+    - var html_class = 'store-locator'
+    - page.id = 'store-locator'
+    - page.title  = 'Store Locator'
+    - page.description = page.title
+
+
+block og
+    //- open graph
+    +og({
+        type: 'website',
+        title: page.title,
+        description: page.description,
+        url: '',
+        img: '',
+        locale: ''
+    })
+
+
+block jshead
+    script(src="js/common.js" defer)
+    script(src="js/store-locator.js" defer)
+
+block content
+    include ../../components/header/_header
+
+    #react-entry
+
+    include ../../components/footer/_footer

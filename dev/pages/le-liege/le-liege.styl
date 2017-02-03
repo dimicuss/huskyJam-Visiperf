@@ -1,0 +1,82 @@
+.le-container
+    @extend $cf
+    @extend $center
+    max-width 1600px
+
+    &__colL
+        +above(1024px + 1)
+            float left
+            width 415px
+            padding 50px 20px 25px
+
+    &__colR
+        @extend $cf
+        background-color #fff
+
+        +above(768px)
+            padding 0 30px
+
+        +above(1024px + 1)
+            float left
+            width calc(100% - 415px)
+            min-height 1250px //100vh // colL height
+
+        +above(1280px)
+            padding 0 50px
+
+        +above(1440px)
+            padding 0 130px
+
+
+.product-contact.le
+    //reset
+    lost-column none
+    padding 0
+
+
+.le-title
+    @extend $h-reset
+    font-size 48px
+    font-weight 300
+    text-align center
+    color mine_shaft
+    margin-top 75px
+    margin-bottom 55px
+
+
+.le-image
+    display block
+    @extend $center
+    max-width 100%
+    +above(768px)
+        margin-bottom -100px
+
+
+.le-article
+    position relative // lay over img
+    @extend $cf
+    @extend $center
+    max-width 635px
+    background-color #fff
+    padding 0 30px
+    margin-bottom 40px
+
+    &__h2
+        @extend $h-reset
+        font-size 30px
+        font-weight 300
+        text-align center
+        margin-top 50px
+        margin-bottom 65px
+
+    &__h3
+        @extend $h-reset
+        font-size 18px
+        font-weight 300
+        margin-top 20px
+        margin-bottom 20px
+
+    &__p
+        font-size 12px
+        line-height (21/12)
+        text-align justify

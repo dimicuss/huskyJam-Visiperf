@@ -1,0 +1,181 @@
+.simple-search
+    height 100%
+    position relative
+    min-height 1040px
+
+    &__google-map,
+    &__shadow
+        top 0
+        left 0
+        right 0
+        bottom 0
+        position absolute
+
+    &__shadow
+        z-index -1
+        background linear-gradient(to bottom, iron 22%, transparent 100%)
+
+    &__google-map
+        z-index -2
+
+    &__header
+        font-size 19px
+        font-weight 200
+        text-align center
+        margin 0 0 46px 0
+        padding-top 100px
+
+    &__form-block
+        margin 0 auto
+        max-width 620px
+        vertical-align middle
+        text-align center
+
+
+
+        &__input,
+        &__ou,
+        &__geo-button
+            display inline-block
+            vertical-align middle
+            +below_portrait(w768)
+                display block
+                max-width 245px
+                margin 0 auto
+
+        &__input__wrapper
+            position relative
+            border-tr = 1px solid transparent
+            padding 10px  9px 10px 18px
+            border-top border-tr
+            border-left border-tr
+            border-right border-tr
+            border-bottom 1px solid black
+            transition border 0.2s ease-in, background 0.2s ease-in
+
+            &__error-field
+                text-align left
+                margin-top 5px
+                color alizarin_crimson
+                font-size 10px
+
+            &:after
+                content ''
+                display inline-block
+                vertical-align middle
+                margin-left 24px
+                retina_sprite($s-loupe)
+
+            &.--js-focus
+                background white
+                border 1px solid curious_blue
+                border-radius 3px
+                &::after
+                    retina_sprite($s-loupe-blue)
+
+
+
+
+        &__input
+            max-height 42px
+            & input
+                max-width 176px
+                border none
+                background transparent
+
+                &:focus
+                    outline none
+
+                    &::-webkit-input-placeholder
+                        color transparent
+
+                    &:-ms-input-placeholder
+                        color transparent
+
+                    &::-moz-placeholder
+                        color transparent
+
+                    &:-moz-placeholder
+                        color transparent
+
+                &::-webkit-input-placeholder
+                    color black
+
+                &:-ms-input-placeholder
+                    color black
+
+                &::-moz-placeholder
+                    color black
+
+                &:-moz-placeholder
+                    color black
+
+        &__ou
+            margin 0 45px 0 45px
+            +below_portrait(w768)
+                margin 20px auto
+
+        &__ok
+            display block
+            position relative
+            size = 46px
+            width size
+            height size
+            border-radius (size / 2)
+            background downriver
+            margin size auto 0 auto
+            color white
+            padding 17px 0 17px 0
+            font-size 11px
+
+            &__shadow
+                position absolute
+                width size
+                height 10px
+                right 50%
+                bottom -20px
+                transform translateX(50%)
+                background radial-gradient(40% 50%, rgba(black, 0.1), transparent)
+                opacity 0
+                transition opacity 0.2s ease-in
+
+            &:hover
+                background di_serria
+                border 1px solid sandrift
+
+                .--hov-shadow
+                    opacity 1
+
+        &__geo-button
+            position relative
+            width 245px
+            height 40px
+            border-radius 20px
+            background downriver
+            padding 11px 0 11px 21px
+            text-align left
+            color snow_drift
+
+            &:hover
+                cursor pointer
+
+            & span
+                margin 0
+
+            &:after
+                top 50%
+                right 17px
+                content ''
+                position absolute
+                transform translateY(-50%)
+                retina_sprite($s-target)
+
+            &:hover
+                background di_serria
+                border 1px solid sandrift
+
+        &__geo-button,
+        &__ok
+            transition background 0.2s ease-in
+            border 1px solid transparent
+

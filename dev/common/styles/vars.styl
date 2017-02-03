@@ -1,0 +1,74 @@
+// ==========
+// Font
+// ==========
+font_default = sans-serif
+arial = Arial, font_default
+roboto = Roboto, font_default
+body_font = roboto[0], arial[0], font_default
+
+// ==========
+// Base Settings
+// ==========
+browser_fs = 16px // used for rem, em functions
+html_bg = white
+body_color = black
+body_lh = 1.1
+
+// ==========
+// Responsive
+// ==========
+
+// точки
+w768 = 768px
+w1440 = 1440px
+
+
+// контейнеры
+containers = {
+    container: { // classname
+        default_gutter: 15px, // default gutter [px or 0]
+        breakpoints: {
+            '0': 768px 668px 0 // container-breakpoint container-width [container-gutter]
+            '1': 1280px 1070px 20px
+        }
+    }
+}
+
+// Начиная с ширины `1440px` добавляется коэфициент `html {font-size 1.25vw}`
+vw_scale = false // w1440 1.25vw
+
+// ==========
+// Lost Grid Settings
+// ==========
+@lost gutter 0; // override default gutter
+
+// ==========
+// Project variables
+// ==========
+
+dove_gray      = #737373
+snow_drift     = #f5f9f5
+alto           = #DADADA
+pelorous       = #3E99C5
+mine_shaft     = #333333
+white          = #ffffff
+black          = #000000
+downriver      = #0b1a5d
+mine_shaft_a   = rgba(#363636, 0.95)
+curious_blue   = #1DA0E2
+lima           = #7cb811
+bright_red     = #a70000
+di_serria      = #E2A364
+iron           = #dee1e5
+silver_chalice = #a7a7a7
+concrete       = #F2F2F2
+atlantis       = #94CE2D
+mercury        = #e6e6e6
+sandrift       = #AF8E7B
+silver_chalice = #a7a7a7
+black_a        = rgba(black, 0.45)
+spun_pearl     = #A6A6A8
+wild_sand      = #f5f5f5
+madison        = #081C5B
+alizarin_crimson = #df1a25
+silver = #CDCDCD

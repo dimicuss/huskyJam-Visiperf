@@ -1,0 +1,831 @@
+.wild_sand{
+	background wild_sand
+}
+
+.wrapper
+	max-width 1600px
+	margin 0 auto
+	background wild_sand
+
+.product-cart
+	lost-utility clearfix
+	background wild_sand
+	width 100%
+
+
+	&__left
+		lost-column 1/2
+		padding 71px 64px 0 66px
+		box-sizing border-box
+
+	&__image
+		margin-top 100px
+		text-align center
+		width 100%
+		max-width 670px
+		height 470px
+		line-height 470px
+
+		img
+			vertical-align middle
+			width 100%
+			max-width 470px
+
+	&__right
+		lost-column 1/2
+		lost-center 100%
+		padding 108px 0 160px
+		background white
+
+	&__col
+		lost-column 3/4
+		float none !important
+		margin 0 auto
+		padding 0 12px
+		box-sizing border-box
+
+		&:last-child
+			margin-right auto
+
+	&__header
+		text-align center
+		font-weight 300
+		font-size 48px
+		color downriver
+
+		div
+			font-size 15px
+			font-weight 500
+			margin-top 13px
+			text-transform uppercase
+			color black
+
+	&__descripton
+		margin-top 70px
+
+	&__strong
+		font-weight 500
+		font-size 15px
+
+	&__text
+		font-size: 12px;
+		line-height: 20px;
+		margin: 10px 0 33px;
+		padding-right: 55px;
+		letter-spacing: 0.15px;
+
+	&__pointer-item
+		margin-top 12px
+
+	&__pointer-item
+		display inline-block
+		width 36px
+		height 36px
+		text-align center
+		line-height 35px
+		border 1px solid silver_chalice
+		color silver_chalice
+		margin-right 3px
+		font-size 12px
+		cursor pointer
+		box-sizing border-box
+
+		&:hover
+			border-color downriver
+			color downriver
+
+	&__pointer-item_out-stock
+		background url('/img/out-stock.png') center center no-repeat
+
+		&:hover
+			border-color silver_chalice
+			color silver_chalice
+	&__price
+		position relative
+		margin 41px 0 0 7px
+		font-size 40px
+		font-weight 300
+		color madison
+
+// Адаптивность для карточки
++below(1024px)
+
+	.product-cart
+
+		&__left
+			display	block
+			float none
+			width 100%
+		
+		&__image
+			margin 0 auto
+			height auto
+			line-height normal
+			padding-top 50px
+
+
+		&__right
+			display	block
+			float none
+			width 100%
+
+		&__text
+			padding-right 0
+
++below(1024px)
+	.product-cart__right
+		padding 0 0 40px 0
+
++below(768px)
+
+	.product-cart__left
+		padding-top 40px
+
++below(320px)
+
+	.product-cart__left
+		padding 20px 20px 0px 20px
+
+// Блок с картой и списком товарами
+.products-block
+	background snow_drift
+	lost-utility clearfix
+	padding-top 40px
+
+// Левый блок с картой и формой
+.product-contact
+	lost-column 1/4
+	padding 87px 8px 20px 20px
+	box-sizing border-box
+
+	&__map
+		width 100%
+		height 380px
+		background #c9c9c9
+
+		iframe
+			width 100%
+			height 100%
+
+	&__info
+		position relative
+
+	&__inner
+		background white
+		padding: 44px 0 79px 44px;
+		font-size: 14px;
+		
+	&__address
+	&__time
+	&__phone
+		position relative
+		padding-left 40px
+
+	&__address:before
+		retina_sprite($s-r-icon1)
+
+	&__time:before
+		retina_sprite($s-r-icon2)
+
+	&__phone:before
+		retina_sprite($s-r-icon3)
+
+	&__address
+		padding-top 5px
+		margin-bottom 32px
+		
+		&:before
+			content ''
+			position absolute
+			top 0
+			left -1px
+		
+	&__time
+		&:before
+			content ''
+			position absolute
+			top 2px
+			left 2px
+
+	&__time-now
+		color atlantis
+		font-weight 500
+
+	&__time-month
+		font-style italic
+		font-size 11px
+		letter-spacing .3px
+		margin-top 2px
+
+	&__table
+		margin-top 17px
+		border-spacing 0
+		border-collapse collapse
+
+		td
+			vertical-align top
+			letter-spacing -.3px
+			padding-bottom 1px
+		
+			&:first-child
+				font-weight bold
+				font-size 12px
+				width 46px
+				padding-left 3px
+				letter-spacing normal
+
+	&__phone
+		margin-top 20px
+		padding-top 3px
+		font-weight bold
+
+		&:before
+			content ''
+			position absolute
+			top 0
+			left 3px
+
+
+
+	&__form
+		position relative
+		background white
+
+	&__form-row
+		display table
+		width 100%
+
+	&__form-col
+		width 50%
+		display table-cell
+
++below(768px)
+
+	.product-contact__map
+		height 290px
+
+// Общие классы для формы
+.input-field
+	border none
+	border-top 1px solid mercury
+	height 45px
+	line-height 44px
+	padding 0 20px
+	box-sizing border-box
+	font-size 12px
+	width 100%
+	outline none
+	+placeholder()
+		color darkgray
+		transition color .3s ease
+	&:focus
+		+placeholder()
+			color transparent
+
+
+.input-field_border-right
+	border-right 1px solid mercury
+
+textarea.input-field
+	height 209px
+	padding 13px 20px
+	line-height 18px
+	resize none
+
+.input-button
+	background downriver
+	color white
+	text-align center
+	border none
+	width 100%
+	height 66px
+	font-size 14px
+	text-transform uppercase
+	cursor pointer
+	box-sizing border-box
+	transition 0.3s ease
+
+	&:hover
+		background di_serria
+
+
+::-webkit-input-placeholder
+	font-size 12px
+	opacity .8
+
+::-moz-placeholder
+	font-size 12px
+	opacity .8
+
+:-moz-placeholder
+	font-size 12px
+	opacity .8
+
+:-ms-input-placeholder
+	font-size 12px
+	opacity .8
+
+
+// Правый блок с товарами
+.product-more
+	lost-column 3/4
+	padding 0 0 0 10px
+	box-sizing border-box
+	background snow_drift
+
+	&__header
+		padding 0
+		margin 0
+		font-size 20px
+		margin-bottom 54px
+		font-size 30px
+		font-weight 300
+
+
+// Товары
+.home-refer-grid
+	background-color snow_drift
+	 @extend $cf
+
+	&__col
+		lost-column 1/3
+
+
+// prod-box
+.prod-box
+	@extend $link-reset
+	position relative
+	display block
+	max-width 377pe
+	min-height 377pe
+	margin 0 20pe 20pe 0
+	background-color #fff
+	padding 24pe 10pe
+	box-sizing border-box
+	transition background-color .3s ease, box-shadow .3s ease
+
+	&:hover
+		background-color #F8F8FA
+		box-shadow 0 0 5px #d2d2d2
+
+	&__price
+		position absolute
+		top 24pe
+		right 27pe
+		font-size 19pe
+		color spun_pearl
+
+	&__view
+		display flex
+		align-items center
+		justify-content center
+		height 260pe
+
+	&__img
+		display block
+		max-width 100%
+		max-height 100%
+
+	&__labels
+		display flex
+		justify-content center
+		margin-bottom 12pe
+
+	&__label
+		margin 5pe 5pe 5pe 0
+
+	&__desc
+		font-size 14.4pe
+		font-weight 700
+		text-align center
+		text-transform uppercase
+
+
+
+// prod-shop
+.prod-shop
+	@extend $link-reset
+	position relative // asb img
+	display block
+	max-width 377pe
+	min-height 377pe
+	margin 0 20pe 20pe 0
+	box-sizing border-box
+
+	// overlay
+	&:before
+		content ''
+		absolute top left right bottom
+		z-index 1
+		background-color #fff
+		opacity .35
+		transition opacity .3s ease
+
+	&:hover:before
+		opacity 0
+
+
+	&__img
+		absolute top left
+		size 100%
+		object-fit cover
+
+	&__desc
+		absolute left right bottom
+		z-index 2
+		padding 10pe 10pe 20pe
+		text-align center
+
+
+	&__txttop
+		font-size 14pe
+		font-weight 700
+		text-transform uppercase
+
+	&__txt
+		font-size 14pe
+
+
++below(1280px)
+
+	.product-contact__inner
+		padding-left 10px
+		padding-right 10px
+
+	.input-field_border-right
+		border-right none
+
+	.product-contact__form-row
+	.product-contact__form-col
+		display block
+		width 100%
+
+
++below(1024px)
+
+	.products-block
+		padding-top 0
+
+	.product-contact
+		lost-column 1/1
+		display table
+		width 100%
+		padding 0
+		margin-top 0
+
+		&__map
+			display table-cell
+			width 70%
+
+		&__info
+			display table-cell
+			width 30%
+
+		&__inner
+			padding-top 20px
+
+	textarea.input-field
+		height 120px
+
+	.product-more
+		lost-column 1/1
+		padding-left 0
+
+	.product-more__header
+		margin 30px 20px 20px
+
+	.home-refer-grid
+		background-color snow_drift
+		@extend $cf
+
+		&__col
+			lost-column 1/2
+
+		&__col:nth-of-type(1n)
+			padding 0 10px 0 20px
+
+		&__col:nth-of-type(2n)
+			padding 0 20px 0 10px
+
+	
+	.prod-box
+	.prod-shop
+		max-width 450pe
+		margin-left auto
+		margin-right auto
+	
+
++below(768px)
+
+	.product-contact
+		display block
+
+		&__map
+		&__info
+			display block
+			width 100%
+
+		&__inner
+		&__form
+			display block
+			width 100%
+
+		&__inner
+			min-height 200px
+
+		&__time
+			position absolute
+			top 15px
+			width 240px
+			right 0
+			padding-left 80px
+
+			&:before
+				left 40px
+
+		&__phone
+			position absolute
+			top 19px
+			right 260px
+			margin-top 0
+
+		&__address
+			margin-right 400px
+
+
+	.home-refer-grid
+		@extend $cf
+
+		&__col
+			lost-column 1/1
+
+		&__col:nth-of-type(1n)
+		&__col:nth-of-type(2n)
+			padding 0
+
+	.product-more__header
+		text-align center
+
+	.prod-box
+	.prod-shop
+		max-width 90%
+
++below(600px)
+
+	.product-contact__phone
+		position relative
+		top 0
+		left 0
+		margin-top 20px
+
+	.product-contact__address
+		margin-right 250px
+
+
+
++below(420px)
+
+	.product-contact__time
+		position relative
+		top 0
+		left 0
+		padding-left 40px
+
+		&:before
+			left 2px
+
+	.product-contact__address
+	.product-contact__phone
+		margin-right 0
+
++below(320px)
+
+	.prod-box
+	.prod-shop
+		max-width 95%
+
+	.home-refer-grid__col:nth-of-type(1n)
+	.home-refer-grid__col:nth-of-type(2n)
+		padding 0 10px
+
+// Слайдер и надпись
+.product-reviews
+	min-height 411px
+	background concrete
+	lost-utility: clearfix;
+
+.reviews-text
+	lost-column: 7/12;
+	padding 200px 22px 0 0
+	padding-right 22px
+
+	&__line1
+		font-size 36pe
+		font-weight 600
+		text-align right
+
+	&__line2
+		font-size 35pe
+		margin-top 13px
+		text-align right
+
+	&__link
+		margin-top 30px
+
+
+	&__button
+		width 400px
+		line-height 66px
+		float right
+		display inline-block
+		text-decoration none
+
+
+.reviews-slider
+	lost-column: 5/12;
+	position relative
+
+	&__slider-item
+		text-align center
+
+	&__image
+		height 100%
+		
+	&__text
+		position absolute
+		bottom 10%
+		width 90%
+		max-height 90%
+		min-height 80px
+
+
+	&__left-quote-wrapper
+	&__right-quote-wrapper
+		position relative
+		height 19px
+
+	&__left-quote
+		position absolute
+		left 47pe
+		retina_sprite($s-quotes-1)
+
+	&__right-quote
+		position absolute
+		right 45pe
+		retina_sprite($s-quotes-2)
+
+	&__citation
+		position relative
+		text-align left
+		left 45px
+		top 16px
+		font-size 1.125em
+		min-height 40px
+		padding 0 90px 30px 0
+		box-sizing border-box
+
++below(1280px)
+
+	.reviews-slider__right-quote
+		right 45pe
+
++below(1024px)
+
+
+	.reviews-slider
+		lost-column: 3/5;
+
+		&__right-quote
+			right 60pe
+
+	.reviews-text
+		padding-top 175px
+		lost-column: 2/5;
+
+		&__line1
+			font-size 32pe
+
+		&__line2
+			font-size 30pe
+
+		&__button
+			width 90%
+
+
++below(992px)
+
+	.reviews-text
+		padding-top 155px
+
+		&__line1
+			font-size 26pe
+
+		&__line2
+			font-size 22pe
+
+	.reviews-slider__right-quote
+		right 45pe
+
++below(768px)
+	
+	.reviews-text
+		lost-column: 1/1;
+		padding 20px 0
+
+		&__line1
+		&__line2
+			text-align center
+			padding 0 10px
+
+		&__link
+			text-align center
+
+		&__button
+			float none
+
+	.reviews-slider
+		lost-column: 1/1;
+
+		&__right-quote
+			right 35pe
+
+		&__text
+			left 30px
+
+
++below(320px)
+
+	.reviews-slider__right-quote
+		right 30pe
+
+	.reviews-slider__citation
+		padding-right 80px
+
+// Стили слайдера
+
+.slick-slide
+	position relative
+	outline none
+
+	img
+		margin 0 auto
+
+.slick-dots
+	position absolute
+	bottom 25px
+	display block
+	width 100%
+	padding 0
+	margin 0
+	list-style none
+	text-align center
+
+	li
+		position relative
+		display inline-block
+		width 8px
+		height 8px
+		margin 0 3px
+		padding 0
+		cursor pointer
+		background mercury
+		border-radius 500px
+
+		button
+			font-size 0
+			display none
+
+	li.slick-active
+		background downriver
+
+
+
+
+
+
+
+// Хлебные крошки
+
+.breadcrumbs
+	position relative
+	font-size: 12px;
+
+	&__link
+		position relative
+		text-decoration underline
+		color black
+		margin-right 12px
+		
+		&:after
+			content '>'
+			position: absolute;
+			top: 1px;
+			right: -11px;
+			text-decoration: none;
+
+		&:hover
+			color pelorous
+
+	&__current
+		font-weight 500
+

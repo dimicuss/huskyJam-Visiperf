@@ -1,0 +1,83 @@
+.results
+    @extend .clearfix
+    mobile = 425px
+    border = 1px solid alto
+    border-top border
+    border-right border
+    padding 62px 28px 69px 28px
+    +below_portrait(mobile)
+        padding 40px 28px 47px 28px
+
+    &__search
+        @extend .clearfix
+        position relative
+        height = 60px
+        border 1.5px solid curious_blue
+        border-radius 3px
+        background white
+
+        &__input:focus,
+        &__button:focus
+            outline none
+
+        &__input
+            border none
+            padding-left 22px
+            height height
+            width 95%
+
+            &:focus
+                outline none
+
+        &__loupe
+            retina_sprite($s-loupe-blue-bg)
+            position absolute
+            top 50%
+            transform translateY(-50%)
+            right 14px
+
+
+    &__result
+        position relative
+
+    &__result__text
+        font-size 15px
+        font-family Roboto
+        text-align center
+        padding 0 70px
+        +below_portrait(420px)
+            padding-left 0
+
+        &__header
+            font-weight 600
+
+        &__address
+            margin 0
+
+    &__result__button
+        position absolute
+        top 50%
+        right 0
+        transform translateY(-50%)
+        size = 40px
+        width size
+        height size
+        background white
+        border 1px solid dove_gray
+        border-radius 2px
+        box-shadow 0 0 5px rgba(black, 0.2)
+        transition box-shadow 0.2s ease-in
+
+        &:after
+            content ''
+            position absolute
+            top 0
+            left 0
+            transform translate(50%, 50%)
+            retina_sprite($s-loupe-gray)
+
+        &:hover
+            cursor pointer
+            box-shadow 0 0 15px rgba(black, 0.2)
+
+

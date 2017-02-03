@@ -1,0 +1,27 @@
+.pin
+    display  inline-block
+    position relative
+
+    &.--js-pancarte-hidden + .pancarte
+        opacity 0
+
+
+    &:hover
+        cursor pointer
+
+    &__icon
+        retina_sprite($s-pin-royan)
+
+    &__label
+        top -5px
+        right -5px
+        color white
+        width 21px
+        height @width
+        position absolute
+        font-size 11px
+        background bright_red
+        border-radius (@width / 2)
+        text-align center
+        padding 5px 0
+

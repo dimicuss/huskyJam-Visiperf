@@ -1,0 +1,16 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "at-rule-empty-line-before": null,
+        "block-opening-brace-space-before": null,
+        "declaration-empty-line-before": null,
+        "function-calc-no-unspaced-operator": null,
+        "function-comma-space-after": null,
+        "indentation": null,
+        "rule-nested-empty-line-before": null,
+        "rule-non-nested-empty-line-before": null,
+        "selector-list-comma-newline-after": null,
+        "selector-pseudo-element-colon-notation": null,
+        "length-zero-no-unit": null
+    }
+}

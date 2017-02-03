@@ -1,0 +1,184 @@
+extends ../../common/jade/_default
+
+block pageInfo
+    - var page = {}
+    - page.id = 'home'
+    - page.title = 'Home'
+    - page.description = page.title
+    - html_class = {class: 'snowdrift'}
+
+block og
+    //- open graph
+    +og({type: 'website', title: page.title, description: page.description, url: '', img: '', locale: ''})
+
+append jshead
+    script(defer, src='js/produits.js')
+
+
+block content
+    include ../../components/header/_header
+    div.wrapper
+        section.home-store
+            .home-breadcrumbs
+
+                a.home-breadcrumbs__link(href="#" title="")
+                    span.home-breadcrumbs__image
+                    span.home-breadcrumbs__text Retour au Store Locator
+            h1.home-store__h1 Tendance Liège
+                div Royan
+            .home-social
+                    a.home-social__item(href="#")
+                        img(src="img/home-social.png" alt="")
+                    a.home-social__item(href="#")
+                        img(src="img/home-social.png" alt="")
+                    a.home-social__item(href="#")
+                        img(src="img/home-social.png" alt="")
+            .home-cart
+                .home-cart__left
+                .home-cart__right
+                    .home-cart__arrow
+                        img(src="img/home-arrow.png" alt="")
+                    .home-info
+                        .home-info__manager
+                            .home-manager
+                                .home-manager__photo
+                                    img(src="img/manager-photo.jpg" alt="")
+                                .home-manager__about
+                                    .home-manager__name Hélène Cazala
+                                    .home-manager__text.
+                                        vous accueille avec passion dans son magasin de Royan et vous fera découvrir les multiples facettes ce ce noble matériau.
+
+                            .home-contact
+                                .home-contact__phone 05 46 06 04 95
+
+                                .home-contact__address 5 place Charles de Gaulle 17200 ROYAN
+
+                                .home-contact__time
+                                    div.home-contact__time-now Ouvert en ce moment
+                                    div.home-contact__time-month Fermeture à 19h
+                                    table.home-contact__table
+                                        tr
+                                            td LUN
+                                            td 9h30 - 18h30
+                                        tr
+                                            td MAR
+                                            td 9h30 - 18h30
+                                        tr
+                                            td MER
+                                            td 9h30 - 18h30
+                                        tr
+                                            td JEU
+                                            td 9h30 - 18h30
+                                        tr
+                                            td VEN
+                                            td 10h00 - 18h30
+                                        tr
+                                            td SAM
+                                            td Ferme
+                                        tr
+                                            td DIM
+                                            td Ferme
+
+                    .home-link
+                        .home-link__contact
+
+                        a(class="input-button home-link__button" href="#contactBlock").
+                            Contactez-nous
+
+
+        section.products-block
+            .product-contact#contactBlock
+                .product-contact__map#mapGoogle
+                .product-contact__info
+                    .product-contact__inner
+                        .product-contact__address 5 place Charles de Gaulle 17200 ROYAN
+
+                        .product-contact__time
+                            div.product-contact__time-now Ouvert en ce moment
+                            div.product-contact__time-month Fermeture à 19h
+                            table.product-contact__table
+                                tr
+                                    td LUN
+                                    td 9h30 - 18h30
+                                tr
+                                    td MAR
+                                    td 9h30 - 18h30
+                                tr
+                                    td MER
+                                    td 9h30 - 18h30
+                                tr
+                                    td JEU
+                                    td 9h30 - 18h30
+                                tr
+                                    td VEN
+                                    td 10h00 - 18h30
+                                tr
+                                    td SAM
+                                    td Ferme
+                                tr
+                                    td DIM
+                                    td Ferme
+
+                        .product-contact__phone 05 46 06 04 95
+
+
+                    .product-contact__form
+                        .product-contact__form-row
+                            div.product-contact__form-col
+                                input(type="text" class="input-field input-field_border-right" placeholder="Nom *" required="required")
+                            div.product-contact__form-col
+                                input(type="text" class="input-field" placeholder="Prénom *" required="required")
+                        div
+                            input(type="email" class="input-field" placeholder="E-mail *" required="required")
+                        div
+                            input(type="text" class="input-field" placeholder="Téléphone *" required="required")
+                        div
+                            textarea(type="text" class="input-field" placeholder="Message *" required="required")
+                        div
+                            input(type="submit" class="input-button" value="ENVOYER")
+            
+            .product-more
+                h2.product-more__header Plus de 300 références dans notre magasin...
+                .home-refer-grid
+                    - var prodArr = [{price: '10€', img: 'r1.png', desc: 'Casquette en liège reglable'}, {price: '40€', img: 'r1.png', desc: 'CEINTURE EN LIège'}, {price: '40€', img: 'r3.png', desc: 'COLLIER EN liège'}, {price: '140€', img: 'r4.png', desc: 'POCHETTE RECTANGULAIRE EN TISSUS DE LIège'}, {price: '60€', img: 'r5.png', desc: 'PORTEFEUILLE En liège'}, {price: '90€', img: 'r6.png', desc: 'SAC EN liège'}, {price: '90€', img: 'r7.png', desc: 'SANDALES EN LIège'}, {price: '90€', img: 'r8.png', desc: 'SEAU à CHAMPAGNE EN liège'}, {price: '90€', img: 'r1.png', desc: '!!!Casquette en liège reglable'}, {price: '90€', img: 'r1.png', desc: 'CEINTURE EN LIège'}, {price: '90€', img: 'r3.png', desc: 'COLLIER EN liège'}, {price: '90€', img: 'r4.png', desc: 'POCHETTE RECTANGULAIRE EN TISSUS DE LIège'}, {price: '90€', img: 'r5.png', desc: 'PORTEFEUILLE En liège'}, {price: '90€', img: 'r6.png', desc: 'SAC EN liège'}]
+                    - for(var i = 0; i < 14; i++)
+                        .home-refer-grid__col
+                            a.prod-box(href="")
+                                .prod-box__price= prodArr[i].price
+                                .prod-box__view
+                                    img.prod-box__img(src="img/home/#{prodArr[i].img}", alt="product")
+                                .prod-box__labels
+                                    img.prod-box__label(src="img/home/r9.png", alt="label")
+                                    img.prod-box__label(src="img/home/r10.png", alt="label")
+                                .prod-box__desc= prodArr[i].desc
+
+                    .home-refer-grid__col
+                        a.prod-shop(href="")
+                            img.prod-shop__img(src="img/home/r12.jpg", alt="image")
+                            .prod-shop__desc
+                                .prod-shop__txttop ... à découvrir à une seule adresse
+                                .prod-shop__txt 5 place Charles de Gaulle 17200 ROYAN
+
+        section.product-reviews
+            .reviews-text
+                .reviews-text__line1.
+                    Nos clients croient en nos produits.
+                .reviews-text__line2.
+                    Voici ce qu’ils pensent.
+                .reviews-text__link
+                    a(class="input-button reviews-text__button" href="#contactBlock").
+                        Contactez-nous
+            .reviews-slider
+                - var $slider = [{img: '/img/slider/s-1.jpg', citation: 'Je suis végane c\'est le paradis pour moi. Je suis végane c\'est le paradis pour moi. Je suis végane c\'est le paradis pour moi. Je suis végane c\'est le paradis pour moi. Je suis végane c\'est le paradis pour moi. Je suis végane c\'est le paradis pour moi.'},{img: '/img/slider/s-2.jpg', citation: 'C\'est super je ne connaissais pas le liège sous cette forme.'},{img: '/img/slider/s-3.jpg', citation: 'C\'est super léger et c\'est ce que je recherchais.'}]
+                - for(var i = 0; i < 3; i++)
+                    .reviews-slider__slider-item
+                        .reviews-slider__text
+                            .reviews-slider__left-quote-wrapper
+                                .reviews-slider__left-quote
+                            .reviews-slider__citation=$slider[i].citation
+                            .reviews-slider__right-quote-wrapper
+                                .reviews-slider__right-quote
+                        img(class="reviews-slider__image" src="#{$slider[i].img}")
+
+
+    include ../../components/footer/_footer

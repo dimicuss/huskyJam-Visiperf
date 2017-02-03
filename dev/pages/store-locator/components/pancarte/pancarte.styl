@@ -1,0 +1,96 @@
+.pancarte
+    tablet = 920px
+    position absolute
+    width 373px
+    min-height 233px
+    border 1px solid downriver
+    border-radius 2px
+    background white
+    top -272px
+    left -114px
+    opacity 1
+    transition opacity 0.2s ease-in
+    box-shadow 1px 1px 2px rgba(black, 0.3)
+
+    +below_portrait(tablet)
+        width 300px
+
+    &__header
+        color white
+        font-size 12px
+        background downriver
+        font-weight 600
+        padding 0 6px
+
+        &__text
+            display inline-block
+            padding 13px 0
+            margin-left 10px
+
+        &:before
+            content ''
+            display inline-block
+            vertical-align middle
+            retina_sprite($s-r-icon1)
+
+    &__container
+        &__description
+            margin-top 20px
+
+        &__description span
+            display block
+
+        &__image
+            float left
+            margin 0 12px
+
+    &__container__link
+        display block
+        margin-top 7px
+        position relative
+        font-size 13px
+        width 96px
+        height 31px
+        color white
+        border-radius (@height / 2)
+        padding 9px 0 9px 14px
+        overflow hidden
+        z-index 4
+
+        &__text
+            position relative
+            z-index 3
+
+        &__background
+            position absolute
+            width inherit
+            height inherit
+            top 0
+            left 0
+
+        &__background.--blue
+            background downriver
+            z-index 1
+
+        &__background.--dark
+            background black_a
+            z-index 2
+            top 50%
+            transform rotate(25deg) translateY(-50%)
+            width 100px
+            height @width
+            left 43px
+            transition left 0.2s ease-in
+
+        &:hover
+            cursor pointer
+            [class$="__background --dark"]
+                left 10px
+
+        &:after
+            content ''
+            display inline-block
+            position relative
+            margin-left 34px
+            z-index 3
+            retina_sprite($s-arrow)

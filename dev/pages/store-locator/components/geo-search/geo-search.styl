@@ -1,0 +1,37 @@
+.geo-search
+    @extend .clearfix
+    tablet = 920px
+
+    +below_portrait(tablet)
+        &__cols__right-col,
+        &__cols__left-col
+            float none !important
+            width 100% !important
+
+    &__cols__right-col,
+    &__cols__left-col
+        float left
+        min-height 1042px
+        position relative
+        +below_portrait(tablet)
+            min-height 0
+
+        &__google-map
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+
+    &__cols__right-col
+        width 42.5%
+        +below_portrait(tablet)
+            display none
+
+    &__cols__left-col
+        background snow_drift
+        width 57.5%
+
+
+
+

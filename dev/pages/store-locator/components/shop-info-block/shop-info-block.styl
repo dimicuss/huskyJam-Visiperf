@@ -1,0 +1,48 @@
+.shop-info-block
+    bord-gray = 1px solid alto
+    bord-blue = 1px double curious_blue
+
+    &__google-map
+        position relative
+        overflow hidden
+        +landscape()
+            display none
+
+        &__map-entry
+            height 100%
+
+        &__cross
+            position absolute
+            top 10px
+            right @top
+            font-size 25px
+            color #555
+            transition color 0.2s ease-in
+            text-shadow 0 1px 5px rgba(black, 0.2)
+
+            &::after
+                @extend .fa
+                content '\f00d'
+                display block
+
+            &.--js-hidden
+                display none
+
+    &__shops
+        width 100%
+        border-collapse collapse
+
+    &__cell
+        background white
+        transition border 0.2s ease-in, background 0.2s ease-in
+        border bord-gray
+
+        &.--unselected
+            background snow_drift
+
+        &.--selected
+            border bord-blue
+            box-shadow #ccc 0 0 5px inset
+
+            [class$='__label__counter']
+                background bright_red
